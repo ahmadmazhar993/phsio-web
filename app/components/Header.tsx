@@ -67,7 +67,7 @@ export function Header() {
             <button onClick={() => scrollToSection('contact')} className="block text-gray-700 hover:text-teal-600 transition-colors">
               Contact
             </button>
-            <a href="tel:+1234567890" className="flex items-center text-teal-600 hover:text-teal-700 pt-2">
+            <a href="tel:+923245940135" className="flex items-center text-teal-600 hover:text-teal-700 pt-2">
               <Phone className="size-4 mr-2" />
               <span>Call Us</span>
             </a>
