@@ -28,7 +28,7 @@ export function Contact() {
         from_email: formData.email,
         phone: formData.phone,
         message: formData.message,
-        to_email: 'rehabvistaa@gmail.com', 
+        to_email: 'rehabvistaa@gmail.com',
       };
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
@@ -139,7 +139,7 @@ export function Contact() {
                   <div className="ml-4">
                     <h4 className="text-lg mb-1 text-gray-900">Phone</h4>
                     <p className="text-gray-600">+92 324 5940135</p>
-                    <p className="text-gray-600">+92 315 9888039</p>
+                    {/* <p className="text-gray-600">+92 315 9888039</p> */}
                   </div>
                 </div>
 
@@ -150,7 +150,7 @@ export function Contact() {
                   <div className="ml-4">
                     <h4 className="text-lg mb-1 text-gray-900">Email</h4>
                     <p className="text-gray-600">rehabvistaa@gmail.com</p>
-                    <p className="text-gray-600">drsyedsarmadhussain@gmail.com</p>
+                    <p className="text-gray-600">drsarmadhussain@gmail.com</p>
                   </div>
                 </div>
 
