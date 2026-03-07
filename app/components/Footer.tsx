@@ -27,10 +27,10 @@ export function Footer() {
           <div>
             <h4 className="text-lg mb-4">Follow Us</h4>
             <div className="flex space-x-4">
-              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-teal-600 transition-colors">
+              <a href="https://www.facebook.com/RehabVista" className="bg-gray-800 p-2 rounded-full hover:bg-teal-600 transition-colors">
                 <Facebook className="size-5" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-teal-600 transition-colors">
+              <a href="https://www.instagram.com/rehab_vista" className="bg-gray-800 p-2 rounded-full hover:bg-teal-600 transition-colors">
                 <Instagram className="size-5" />
               </a>
               <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-teal-600 transition-colors">
