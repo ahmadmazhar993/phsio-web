@@ -38,7 +38,7 @@ export function About() {
               We believe in a holistic approach to physiotherapy, combining the latest evidence-based techniques with compassionate care to help you achieve your health goals.
             </p>
           </div>
-          <div className="order-1 lg:order-2 h-[400px] rounded-2xl overflow-hidden shadow-xl">
+          <div className="order-1 lg:order-2 h-[250px] sm:h-[300px] lg:h-[400px] rounded-2xl overflow-hidden shadow-xl">
             <ImageWithFallback
               src="https://scontent.flhe3-2.fna.fbcdn.net/v/t39.30808-6/641326435_122100747063275529_6183860556540463888_n.png?stp=dst-png_s960x960&_nc_cat=106&ccb=1-7&_nc_sid=2a1932&_nc_ohc=wpk_FDA5f0UQ7kNvwHQ_A2b&_nc_oc=AdkHt11OoOvgzBSLma0qadLti70uXzmsqQnfJXlB6ur3CRCRLfOo-QrhD3myLqGihxA&_nc_zt=23&_nc_ht=scontent.flhe3-2.fna&_nc_gid=2lbzQ31qw3-YOm8ayaR6rQ&_nc_ss=8&oh=00_Afw3SeRoouR4IadiJvuNqBr6Wmb_TISPRCIj7CXkm2aeFQ&oe=69B1C688"
               alt="Professional healthcare clinic"
