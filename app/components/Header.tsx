@@ -37,7 +37,7 @@ export function Header() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:+1234567890" className="flex items-center text-teal-600 hover:text-teal-700">
+            <a href="tel:+923245940135" className="flex items-center text-teal-600 hover:text-teal-700">
               <Phone className="size-4 mr-2" />
               <span className="text-sm">Call Us</span>
             </a>
