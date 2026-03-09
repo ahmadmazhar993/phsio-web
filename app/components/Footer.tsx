@@ -33,12 +33,12 @@ export function Footer() {
               <a href="https://www.instagram.com/rehab_vista" className="bg-gray-800 p-2 rounded-full hover:bg-teal-600 transition-colors">
                 <Instagram className="size-5" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-teal-600 transition-colors">
+              {/* <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-teal-600 transition-colors">
                 <Twitter className="size-5" />
               </a>
               <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-teal-600 transition-colors">
                 <Linkedin className="size-5" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
