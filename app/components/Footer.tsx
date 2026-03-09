@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import rehabVistaLogo from '../assets/images/vectorink-vectorizer-result (1).svg';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -8,7 +9,14 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl mb-4 text-teal-400">RehabVista</h3>
+            <div className="flex items-center mb-4">
+              <img
+                src={rehabVistaLogo}
+                alt="RehabVista Logo"
+                className="h-8 w-8 mr-3 rounded"
+              />
+              <h3 className="text-xl text-teal-400">RehabVista</h3>
+            </div>
             <p className="text-gray-400">
               Your trusted partner in physiotherapy and rehabilitation. Helping you recover, rebuild, and thrive.
             </p>

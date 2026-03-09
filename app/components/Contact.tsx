@@ -179,6 +179,27 @@ export function Contact() {
                 </div>
               </div>
             </div>
+
+            {/* Google Map */}
+            <div className="mt-8">
+              <h3 className="text-2xl mb-6 text-gray-900">Find Us</h3>
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                  src="https://maps.google.com/maps?q=REHAB%20VISTA%2C%20D1%20Block%2C%20321%20Street%20D%2C%20NESPAK%20Housing%20Scheme%2C%20Lahore%2C%20Pakistan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="RehabVista Location"
+                  className="w-full"
+                ></iframe>
+              </div>
+              <p className="text-sm text-gray-500 mt-2 text-center">
+                Click on the map to get directions or view on Google Maps
+              </p>
+            </div>
           </div>
         </div>
       </div>
