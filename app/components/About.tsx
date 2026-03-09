@@ -1,6 +1,6 @@
 import { Award, Clock, Users, MapPin } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import clinicImage from '../assets/images/RehabVistaCard.jpg';
+import clinicImage from '../assets/images/RehabVistaCard.png';
 
 const features = [
   {
