@@ -1,5 +1,5 @@
 import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
-import rehabVistaLogo from '../assets/images/vectorink-vectorizer-result (1).svg';
+import rehabVistaLogo from '../assets/images/favicon.png';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
