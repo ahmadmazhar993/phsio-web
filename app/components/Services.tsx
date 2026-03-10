@@ -32,12 +32,12 @@ export function Services() {
   return (
     <section id="services" className="py-2 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl mb-4 text-gray-900">Our Services</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Comprehensive physiotherapy solutions tailored to your recovery and wellness goals
           </p>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => {

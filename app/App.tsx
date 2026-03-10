@@ -1,27 +1,33 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { Services } from './components/Services';
-import { Testimonials } from './components/Testimonials';
-import { About } from './components/About';
-import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { WhatsAppChat } from './components/WhatsAppChat';
 import { BackToTop } from './components/BackToTop';
 
+import { Home } from './pages/Home';
+import { ServicesPage } from './pages/ServicesPage';
+import { TeamPage } from './pages/TeamPage';
+import { AboutPage } from './pages/AboutPage';
+import { FAQPage } from './pages/FAQPage';
+import { ContactPage } from './pages/ContactPage';
+
 export default function App() {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main>
-        <Hero />
-        <Services />
-        <Testimonials />
-        <About />
-        <Contact />
-      </main>
-      <Footer />
-      <WhatsAppChat />
-      <BackToTop />
-    </div>
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/team" element={<TeamPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/faq" element={<FAQPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+        <Footer />
+        <WhatsAppChat />
+        <BackToTop />
+      </div>
+    </Router>
   );
 }
