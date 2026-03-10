@@ -36,10 +36,13 @@ export function Header() {
             </button>
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:+923245940135" className="flex items-center text-teal-600 hover:text-teal-700">
+          <div className="hidden md:flex items-center">
+            <a
+              href="tel:+923245940135"
+              className="flex items-center bg-teal-600 text-white px-4 py-2 rounded-full hover:bg-teal-700 transition-colors"
+            >
               <Phone className="size-4 mr-2" />
-              <span className="text-sm">Call Us</span>
+              <span className="text-sm font-medium">Call Us</span>
             </a>
           </div>
 
@@ -67,9 +70,12 @@ export function Header() {
             <button onClick={() => scrollToSection('contact')} className="block text-gray-700 hover:text-teal-600 transition-colors">
               Contact
             </button>
-            <a href="tel:+923245940135" className="flex items-center text-teal-600 hover:text-teal-700 pt-2">
+            <a
+              href="tel:+923245940135"
+              className="flex items-center bg-teal-600 text-white px-4 py-2 rounded-full hover:bg-teal-700 transition-colors pt-2"
+            >
               <Phone className="size-4 mr-2" />
-              <span>Call Us</span>
+              <span className="font-medium">Call Us</span>
             </a>
           </nav>
         )}
