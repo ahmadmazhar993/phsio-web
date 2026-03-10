@@ -52,7 +52,7 @@ export function About() {
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-105 transform transition duration-300 text-center">
                 <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Icon className="size-8 text-teal-600" />
                 </div>

@@ -43,7 +43,7 @@ export function Services() {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div key={index} className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+              <div key={index} className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg hover:scale-105 transform transition duration-300">
                 <div className="h-100 overflow-hidden">
                   <ImageWithFallback
                     src={service.image}
