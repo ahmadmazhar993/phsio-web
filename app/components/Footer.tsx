@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
 import rehabVistaLogo from '../assets/images/favicon.png';
 
 export function Footer() {
@@ -23,7 +23,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg mb-4 font-semibold">Navigation</h4>
+            <h4 className="text-lg mb-4 font-semibold">Quick Links</h4>
             <ul className="space-y-2">
               <li><a href="#home" className="text-gray-400 hover:text-teal-400 transition-colors">Home</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-teal-400 transition-colors">Services</a></li>
