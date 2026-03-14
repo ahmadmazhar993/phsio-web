@@ -1,45 +1,68 @@
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
-  };
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
-            <h1 className="text-2xl text-teal-600">RehabVista</h1>
-          </div>
+          <Link to="/" className="flex items-center">
+            <h1 className="text-2xl text-teal-600 font-bold">RehabVista</h1>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-teal-600 transition-colors">
+            <Link
+              to="/"
+              className={`transition-colors ${isActive('/') ? 'text-teal-600 font-semibold' : 'text-gray-700 hover:text-teal-600'}`}
+            >
               Home
-            </button>
-            <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-teal-600 transition-colors">
+            </Link>
+            <Link
+              to="/services"
+              className={`transition-colors ${isActive('/services') ? 'text-teal-600 font-semibold' : 'text-gray-700 hover:text-teal-600'}`}
+            >
               Services
-            </button>
-            <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-teal-600 transition-colors">
+            </Link>
+            <Link
+              to="/team"
+              className={`transition-colors ${isActive('/team') ? 'text-teal-600 font-semibold' : 'text-gray-700 hover:text-teal-600'}`}
+            >
+              Team
+            </Link>
+            <Link
+              to="/about"
+              className={`transition-colors ${isActive('/about') ? 'text-teal-600 font-semibold' : 'text-gray-700 hover:text-teal-600'}`}
+            >
               About
-            </button>
-            <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-teal-600 transition-colors">
+            </Link>
+            <Link
+              to="/faq"
+              className={`transition-colors ${isActive('/faq') ? 'text-teal-600 font-semibold' : 'text-gray-700 hover:text-teal-600'}`}
+            >
+              FAQ
+            </Link>
+            <Link
+              to="/contact"
+              className={`transition-colors ${isActive('/contact') ? 'text-teal-600 font-semibold' : 'text-gray-700 hover:text-teal-600'}`}
+            >
               Contact
-            </button>
+            </Link>
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:+1234567890" className="flex items-center text-teal-600 hover:text-teal-700">
+          <div className="hidden md:flex items-center">
+            <a
+              href="tel:+923245940135"
+              className="flex items-center bg-teal-600 text-white px-4 py-2 rounded-full hover:bg-teal-700 transition-colors"
+            >
               <Phone className="size-4 mr-2" />
-              <span className="text-sm">Call Us</span>
+              <span className="text-sm font-medium">Call Us</span>
             </a>
           </div>
 
@@ -55,21 +78,54 @@ export function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden pb-4 space-y-3">
-            <button onClick={() => scrollToSection('home')} className="block text-gray-700 hover:text-teal-600 transition-colors">
+            <Link
+              to="/"
+              className={`block transition-colors ${isActive('/') ? 'text-teal-600 font-semibold' : 'text-gray-700 hover:text-teal-600'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
               Home
-            </button>
-            <button onClick={() => scrollToSection('services')} className="block text-gray-700 hover:text-teal-600 transition-colors">
+            </Link>
+            <Link
+              to="/services"
+              className={`block transition-colors ${isActive('/services') ? 'text-teal-600 font-semibold' : 'text-gray-700 hover:text-teal-600'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
               Services
-            </button>
-            <button onClick={() => scrollToSection('about')} className="block text-gray-700 hover:text-teal-600 transition-colors">
+            </Link>
+            <Link
+              to="/team"
+              className={`block transition-colors ${isActive('/team') ? 'text-teal-600 font-semibold' : 'text-gray-700 hover:text-teal-600'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Team
+            </Link>
+            <Link
+              to="/about"
+              className={`block transition-colors ${isActive('/about') ? 'text-teal-600 font-semibold' : 'text-gray-700 hover:text-teal-600'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
               About
-            </button>
-            <button onClick={() => scrollToSection('contact')} className="block text-gray-700 hover:text-teal-600 transition-colors">
+            </Link>
+            <Link
+              to="/faq"
+              className={`block transition-colors ${isActive('/faq') ? 'text-teal-600 font-semibold' : 'text-gray-700 hover:text-teal-600'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              FAQ
+            </Link>
+            <Link
+              to="/contact"
+              className={`block transition-colors ${isActive('/contact') ? 'text-teal-600 font-semibold' : 'text-gray-700 hover:text-teal-600'}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
               Contact
-            </button>
-            <a href="tel:+923245940135" className="flex items-center text-teal-600 hover:text-teal-700 pt-2">
+            </Link>
+            <a
+              href="tel:+923245940135"
+              className="flex items-center bg-teal-600 text-white px-4 py-2 rounded-full hover:bg-teal-700 transition-colors pt-2"
+            >
               <Phone className="size-4 mr-2" />
-              <span>Call Us</span>
+              <span className="font-medium">Call Us</span>
             </a>
           </nav>
         )}

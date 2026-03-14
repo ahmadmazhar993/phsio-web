@@ -126,6 +126,8 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
   }
 
   /**
@@ -135,6 +137,7 @@
 
   html {
     font-size: var(--font-size);
+    scroll-behavior: smooth;
   }
 
   h1 {

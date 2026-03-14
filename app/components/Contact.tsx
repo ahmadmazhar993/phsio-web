@@ -51,14 +51,14 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-2 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl mb-4 text-gray-900">Get In Touch</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Ready to start your recovery journey? Contact us today to book an appointment or learn more about our services.
           </p>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
@@ -178,6 +178,27 @@ export function Contact() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Google Map */}
+            <div className="mt-8">
+              <h3 className="text-2xl mb-6 text-gray-900">Find Us</h3>
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                  src="https://maps.google.com/maps?q=REHAB%20VISTA%2C%20D1%20Block%2C%20321%20Street%20D%2C%20NESPAK%20Housing%20Scheme%2C%20Lahore%2C%20Pakistan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="RehabVista Location"
+                  className="w-full"
+                ></iframe>
+              </div>
+              <p className="text-sm text-gray-500 mt-2 text-center">
+                Click on the map to get directions or view on Google Maps
+              </p>
             </div>
           </div>
         </div>
