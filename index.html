@@ -43,28 +43,32 @@
 
   <!-- Structured Data / JSON-LD -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "RehabVista",
+  "image": "https://rehabvista.online/app/assets/images/RehabVistaCard.png",
+  "description": "Professional physiotherapy clinic in Lahore with 15+ years experience.",
+  "telephone": "+92 324 5940135",
+  "email": "rehabvistaa@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Block D1 Nespak Housing Scheme",
+    "addressLocality": "Lahore",
+    "addressCountry": "PK"
+  },
+  "priceRange": "$$",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "itemReviewed": {
       "@type": "LocalBusiness",
-      "name": "RehabVista",
-      "image": "https://rehabvista.online/app/assets/images/RehabVistaCard.png",
-      "description": "Professional physiotherapy clinic in Lahore with 15+ years experience.",
-      "telephone": "+92 324 5940135",
-      "email": "rehabvistaa@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Block D1 Nespak Housing Scheme",
-        "addressLocality": "Lahore",
-        "addressCountry": "PK"
-      },
-      "priceRange": "$$",
-      "rating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "500"
-      }
-    }
-  </script>
+      "name": "RehabVista"
+    },
+    "ratingValue": "4.9",
+    "ratingCount": "500"
+  }
+}
+</script>
 </head>
 
 <body>
