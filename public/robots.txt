@@ -1,0 +1,7 @@
+# robots.txt for RehabVista
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://rehabvista.online/sitemap.xml
