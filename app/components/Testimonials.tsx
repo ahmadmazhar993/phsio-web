@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Star } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Testimonial {
   name: string;
@@ -38,7 +38,7 @@ export function Testimonials() {
         // Filter reviews to only include those with text and sort by most recent
         const filteredTestimonials = data.result.reviews
           .filter((review: any) => review.text && review.text.trim().length > 0)
-          .slice(0, 4) // Limit to 4 testimonials
+          .slice(0, 5) // Limit to 5 testimonials
           .map((review: any) => ({
             name: review.author_name,
             rating: review.rating,
@@ -111,7 +111,7 @@ export function Testimonials() {
       <section className="py-20 bg-gray-50" id="testimonials">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl text-gray-900 mb-4">What Our Clients Say</h2>
+            <h2 className="text-3xl sm:text-4xl text-gray-900 mb-4">Reviews & Testimonials</h2>
             <p className="text-lg text-gray-600">Loading testimonials...</p>
           </div>
           <div className="flex justify-center">
@@ -127,7 +127,7 @@ export function Testimonials() {
       <section className="py-20 bg-gray-50" id="testimonials">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl text-gray-900 mb-4">What Our Clients Say</h2>
+            <h2 className="text-3xl sm:text-4xl text-gray-900 mb-4">Reviews & Testimonials</h2>
             <p className="text-lg text-gray-600">{error}</p>
           </div>
         </div>
@@ -139,69 +139,50 @@ export function Testimonials() {
     <section className="py-20 bg-gray-50" id="testimonials">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl text-gray-900 mb-4">What Our Clients Say</h2>
-          <p className="text-lg text-gray-600">Real experiences from people we've helped</p>
+          <h2 className="text-3xl sm:text-4xl text-gray-900 mb-4">Reviews & Testimonials</h2>
+          <p className="text-lg text-gray-600">At Rehab Vista , your satisfaction is our priority! See for yourself what our customers have to say about working with us.</p>
         </div>
 
-        <div className="relative max-w-4xl mx-auto">
-          {/* <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-teal-600 transform transition duration-300 hover:shadow-lg hover:scale-102">
-            {testimonials.map((t, index) => (
-              <div
-                key={index}
-                className={`transition-opacity duration-1000 ${
-                  index === currentSlide ? 'opacity-100' : 'opacity-0 absolute inset-0'
-                }`}
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(t.rating)].map((_, i) => (
-                    <Star key={i} className="text-yellow-400 fill-current w-5 h-5" />
-                  ))}
-                </div>
-                <p className="text-gray-700 italic mb-6 text-lg">"{t.quote}"</p>
-                <div className="border-t border-gray-200 pt-4">
-                  <p className="font-semibold text-gray-900">{t.name}</p>
-                  <p className="text-sm text-teal-600">{t.role}</p>
-                </div>
+        <div className="relative max-w-7xl mx-auto">
+          <button
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-teal-600 text-white p-3 rounded-full hover:bg-teal-700 transition-colors shadow-lg"
+            onClick={() => goToSlide((currentSlide - 1 + testimonials.length) % testimonials.length)}
+            aria-label="Previous testimonials"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          {(() => {
+            const visibleTestimonials = [];
+            for (let i = 0; i < 3; i++) {
+              visibleTestimonials.push(testimonials[(currentSlide + i) % testimonials.length]);
+            }
+            return (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {visibleTestimonials.map((t, index) => (
+                  <div key={index} className={`bg-white p-6 rounded-xl shadow-lg border-l-4 border-teal-600 min-h-[350px] flex flex-col ${index === 1 ? 'transform scale-110 z-10 transition duration-300 hover:scale-115' : 'scale-90 opacity-75'}`}>
+                    <div className="flex justify-center items-center mb-4">
+                      {[...Array(t.rating)].map((_, i) => (
+                        <Star key={i} className="text-yellow-400 fill-current w-5 h-5" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 italic mb-6 text-center">"{t.quote}"</p>
+                    <div className="border-t border-gray-200 pt-4">
+                      <p className="font-semibold text-gray-900 text-center">{t.name}</p>
+                      <p className="text-sm text-teal-600 text-center">{t.role}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div> */}
-<div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-teal-600 transform transition duration-300 hover:scale-105">
-  <div className="transition-all duration-500">
-    <div className="flex items-center mb-4">
-      {[...Array(testimonials[currentSlide].rating)].map((_, i) => (
-        <Star key={i} className="text-yellow-400 fill-current w-5 h-5" />
-      ))}
-    </div>
+            );
+          })()}
 
-    <p className="text-gray-700 italic mb-6 text-lg">
-      "{testimonials[currentSlide].quote}"
-    </p>
-
-    <div className="border-t border-gray-200 pt-4">
-      <p className="font-semibold text-gray-900">
-        {testimonials[currentSlide].name}
-      </p>
-      <p className="text-sm text-teal-600">
-        {testimonials[currentSlide].role}
-      </p>
-    </div>
-  </div>
-</div>
-          {/* Four Tabs/Dots Indicator */}
-          <div className="flex justify-center mt-6 space-x-2">
-            {testimonials.slice(0, 4).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-4 h-4 rounded-full transition-all ${
-                  index === currentSlide
-                    ? 'bg-teal-600 scale-125'
-                    : 'bg-gray-400 hover:bg-gray-600'
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
-            ))}
-          </div>
+          <button
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-teal-600 text-white p-3 rounded-full hover:bg-teal-700 transition-colors shadow-lg"
+            onClick={() => goToSlide((currentSlide + 1) % testimonials.length)}
+            aria-label="Next testimonials"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
         </div>
       </div>
     </section>
